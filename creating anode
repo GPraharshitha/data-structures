@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int x;
+    struct node*l;
+};
+int main()
+{
+    struct node *h;
+    h=malloc(sizeof(struct node));
+    h->x=61;
+    h->l= NULL;
+    struct node *c;
+    c=malloc(sizeof(struct node));
+    c->x=65;
+    c->l =NULL;
+    h->l=c;
+    printf("%d\n",h->x);
+    printf("%d",c->x);
+}
